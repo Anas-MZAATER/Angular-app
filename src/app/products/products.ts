@@ -40,6 +40,8 @@ export class Products implements OnInit {
   public keyword : string = "";
   Constructor(){
   }
+
+  // initialiser une liste des produit a la premier click sur products button
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     this.products =[
@@ -65,7 +67,7 @@ export class Products implements OnInit {
       }
     }
     //========or by filter==============
-    // this.products.filter(p => p.name?.toString().toLowerCase().includes(this.keyword.toLowerCase()))
+    // products.filter(p => p.name?.toString().toLowerCase().includes(this.keyword.toLowerCase()))
     this.products = result;
   }
 }
