@@ -60,10 +60,12 @@ export class Products implements OnInit {
     console.log(this.keyword)
     let result : any=[];
     for(let p of this.products){
-      if (p.name.include(this.keyword)){
+      if (p.name.includes(this.keyword)){
         result.push(p);
       }
     }
+    //========or by filter==============
+    // this.products.filter(p => p.name?.toString().toLowerCase().includes(this.keyword.toLowerCase()))
     this.products = result;
   }
 }
